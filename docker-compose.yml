@@ -7,8 +7,8 @@ services:
     ports:
       - '3500:3500'
     links: 
-      - database
-  database:
+      - mongo
+  mongo:
     image: mongo
     container_name: weatherapi-database
     ports:

@@ -5,7 +5,7 @@ class MongoConnection{
         let MongoClient = mongo.MongoClient;
 
         return await MongoClient.connect(
-            "mongodb://weatherapi_user:weatherapi_password@mongo:27017/weatherapi-container?authSource=admin"
+            "mongodb://weatherapi_user:weatherapi_password@weatherapi-database:27017/weatherapi-container?authSource=admin"
         )
     }
 }

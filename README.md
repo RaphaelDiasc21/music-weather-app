@@ -2,6 +2,7 @@
 REST API indica musicas baseado no clima local
 
   - Url: https://music-weather-api.herokuapp.com/
+  - Setup local: docker-compose up --build
 
  - Endpoints da aplicação
      
@@ -62,5 +63,5 @@ REST API indica musicas baseado no clima local
         - Reconheço que a escolha por utilizar o banco de dados sqlite, não é uma das melhores,
         a princípio utilizei um banco de dados NoSql Mongo, como um container junto a minha aplicação sendo orquestrado pelo docker compose, porém não obtive exito na tentativa de fazer o deploy na Heroku, por isso como solução de contorno implementei o SQLITE com o sequelize
 
-        - A aplicação está dockerizada, para subir a mesma local: docker-compose run --build
+        
  

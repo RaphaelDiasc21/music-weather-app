@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use('/api',Approute);
 
 
-database.sync({force:true});
+database.sync();
 
 app.listen(PORT || 3500, ()=>{
     console.log(`Server is running on port ${PORT}`);

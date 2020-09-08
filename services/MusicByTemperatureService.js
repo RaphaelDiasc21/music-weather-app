@@ -44,22 +44,22 @@ class MusicByTemperatureService{
         if(temperature < 10){
             let musics = await musicUtil.getMusicByCategory("classic");
             return{
-                genero:"classic",
-                musicas:musics
+                category:"classic",
+                musics:musics
             }
         }
         if(temperature >= 10 && temperature <= 25){
             let musics = await musicUtil.getMusicByCategory("rock");
             return{
-                genero:"rock",
-                musicas:musics
+                category:"rock",
+                musics:musics
             }
         } 
 
         let musics = await musicUtil.getMusicByCategory("pop");
         return{
-            genero:"pop",
-            musicas:musics
+            category:"pop",
+            musics:musics
         }
 
     }

@@ -1,6 +1,7 @@
 # music-weather-app
 REST API indica musicas baseado no clima local
 
+  - Url: https://music-weather-api.herokuapp.com/
 
  - Endpoints da aplicação
      

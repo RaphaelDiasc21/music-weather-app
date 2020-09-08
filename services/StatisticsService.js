@@ -1,22 +1,14 @@
-const mongoClient = require('../database/mongoClient');
+const CityStatistics = require('../models/CityStatistics');
 const temperatureUtil = require('../util/TemperatureUtil');
 
 class StatisticsService{
     async createCityStatiscs(cityInfos){
-        let connect = await mongoClient.getConnection();
-
-        await connect.db('statistics')
-               .collection('city')
-               .insert(cityInfos);
-
+       let cityBuilded =  CityStatistics.build(cityInfos);
+       cityBuilded.save();
     }
 
     async getStatistics(){
-        let connection = await mongoClient.getConnection();
-        return connection.db('statistics')
-                               .collection('city')
-                               .find()
-                               .toArray();
+        return await CityStatistics.findAll();
     }
 }
 
